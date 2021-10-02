@@ -49,4 +49,13 @@ const createDocument = async() => {
  
 }
 
-createDocument();
+// createDocument();
+
+
+// Reading document from database using find function
+const fetchDocument = async() => {
+  const fetchResult = await PlayList.find({name:'ronaldo'}).select({_id:0,name:1})
+  console.log(fetchResult);
+}
+
+fetchDocument();
